@@ -12,4 +12,12 @@ class API {
     )
     res.data
   }
+
+    def getPresidentByName(def name) {
+        def http = new RESTClient(ROOT)
+        def res = http.get(
+                path: '/presidents/name-like/' + name
+        )
+        res.data
+    }
 }
